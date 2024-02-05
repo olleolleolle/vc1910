@@ -11,7 +11,7 @@ This reproduction of a ViewComponent issue is using latest Rails, (which is 7.1.
     rails generate rspec:install
     rails g component demo
 
-Afterwards, I added https://github.com/ViewComponent/view_component/issues/1910#issuecomment-1889762507 the test case from this comment.
+Afterwards, I added & modified the test case from this comment: https://github.com/ViewComponent/view_component/issues/1910#issuecomment-1889762507 
 
 ## Result: runs red, 😿
 
