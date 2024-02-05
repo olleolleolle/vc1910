@@ -1,6 +1,6 @@
 # README
 
-This reproduction of a ViewComponent issue is using latest Rails, 7.1, latest view_component, Capybara.
+This reproduction of a ViewComponent issue is using latest Rails, (which is 7.1.3, today), latest view_component, Capybara.
 
     gem i rails
     rails new vc1910
@@ -12,6 +12,10 @@ This reproduction of a ViewComponent issue is using latest Rails, 7.1, latest vi
     rails g component demo
 
 Afterwards, I added https://github.com/ViewComponent/view_component/issues/1910#issuecomment-1889762507 the test case from this comment.
+
+## Result: runs 🌲 green
+
+This ran green.
 
 See ViewComponent issues and other details:
 
