@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This reproduction of a ViewComponent issue is using latest Rails, 7.1, latest view_component, Capybara.
 
-Things you may want to cover:
+  gem i rails
+  rails new vc1910
+  cd vc1910/
+  bundle add view_component
+  bundle add rspec-rails
+  bundle add capybara
+  rails generate rspec:install
+  rails g component demo
 
-* Ruby version
+Afterwards, I added https://github.com/ViewComponent/view_component/issues/1910#issuecomment-1889762507 the test case from this comment.
 
-* System dependencies
+See ViewComponent issues and other details:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- https://github.com/ViewComponent/view_component/pull/945
+- https://github.com/ViewComponent/view_component/issues/1910
