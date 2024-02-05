@@ -13,44 +13,12 @@ This reproduction of a ViewComponent issue is using latest Rails, (which is 7.1.
 
 Afterwards, I added https://github.com/ViewComponent/view_component/issues/1910#issuecomment-1889762507 the test case from this comment.
 
-## Result: runs 🌲 green, 😿
+## Result: runs red, 😿
 
-This ran green. The expected behaviour is that tests fail.
+The expected behaviour is that tests run green.
 
-For readability, here is a copy of the tests:
+The tests: [spec/components/demo_component_spec.rb](/spec/components/demo_component_spec.rb).
 
-```ruby
-# frozen_string_literal: true
-
-require "rails_helper"
-
-RSpec.describe DemoComponent, type: :component do
-  it "renders something useful" do
-    render_inline(described_class.new)
-    expect(page).to have_content "Hello, components!"
-    expect(page).to_not have_content "Goodbye!"
-    expect(page).to_not have_css "#demmmmo"
-  end
-
-  it "reproduces the bug when used with invalid content" do
-    render_inline(described_class.new)
-
-    # I'd expect this to fail, but passes
-    within "#demo" do |element|
-      expect(element).to have_content "Goodbye!"
-    end
-  end
-
-  it "reproduces the bug when used with invalid DOM id" do
-    render_inline(described_class.new)
-
-    # I'd expect this to fail, but passes
-    within "#demmmmo" do |element|
-      expect(element).to have_content "Hello, components!"
-    end
-  end
-end
-```
 
 See ViewComponent issues and other details:
 
